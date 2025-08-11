@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPIRIT Smartphone - Open Source, Open Future</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <title>SPIRIT Smartphone - Open Source Mobile</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Phone Frame Container -->
     <div class="phone-container">
-        <!-- Phone Bezel -->
-        <div class="phone-bezel">
-            <!-- Screen Content -->
+        <!-- Phone Frame -->
+        <div class="phone-frame">
+            <!-- Screen -->
             <div class="phone-screen">
                 <!-- Status Bar -->
                 <div class="status-bar">
@@ -27,171 +26,217 @@
                             <div class="bar"></div>
                         </div>
                         <div class="wifi-icon">📶</div>
-                        <div class="battery">100%</div>
+                        <div class="battery">
+                            <div class="battery-level"></div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Main Content -->
-                <div class="screen-content">
-                    <!-- Hero Section -->
-                    <section class="hero">
-                        <div class="hero-content">
-                            <h1 class="hero-title">SPIRIT</h1>
-                            <p class="hero-subtitle">Open Source Smartphone</p>
-                            <p class="hero-tagline">Taking back control of our digital lives</p>
-                            
-                            <div class="cta-buttons">
-                                <a href="https://github.com/spirit-oss/spirit" class="btn btn-primary">View on GitHub</a>
-                                <a href="#features" class="btn btn-secondary">Learn More</a>
+                <!-- App Content -->
+                <div class="app-content">
+                    <!-- Home Screen -->
+                    <div class="screen active" id="home">
+                        <div class="home-header">
+                            <div class="logo">
+                                <div class="spirit-logo">SPIRIT</div>
+                                <div class="tagline">Open Source Smartphone</div>
                             </div>
                         </div>
-                    </section>
+                        
+                        <div class="app-grid">
+                            <div class="app-icon" data-screen="os">
+                                <div class="icon os-icon">🔧</div>
+                                <span>SPIRIT OS</span>
+                            </div>
+                            <div class="app-icon" data-screen="design">
+                                <div class="icon design-icon">⚡</div>
+                                <span>Hardware</span>
+                            </div>
+                            <div class="app-icon" data-screen="docs">
+                                <div class="icon docs-icon">📚</div>
+                                <span>Docs</span>
+                            </div>
+                            <div class="app-icon" data-screen="about">
+                                <div class="icon about-icon">ℹ️</div>
+                                <span>About</span>
+                            </div>
+                        </div>
 
-                    <!-- Features Section -->
-                    <section id="features" class="features">
-                        <h2 class="section-title">Why SPIRIT?</h2>
-                        <div class="feature-grid">
+                        <div class="privacy-switches">
+                            <div class="switch-title">Privacy Controls</div>
+                            <div class="switches">
+                                <div class="switch">
+                                    <div class="switch-toggle" data-switch="mic"></div>
+                                    <span>🎤</span>
+                                </div>
+                                <div class="switch">
+                                    <div class="switch-toggle" data-switch="camera"></div>
+                                    <span>📷</span>
+                                </div>
+                                <div class="switch">
+                                    <div class="switch-toggle" data-switch="gps"></div>
+                                    <span>📍</span>
+                                </div>
+                                <div class="switch">
+                                    <div class="switch-toggle" data-switch="cellular"></div>
+                                    <span>📶</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SPIRIT OS Screen -->
+                    <div class="screen" id="os">
+                        <div class="app-header">
+                            <button class="back-btn" data-target="home">←</button>
+                            <h2>SPIRIT OS</h2>
+                        </div>
+                        <div class="app-body">
                             <div class="feature-card">
-                                <div class="feature-icon">🔒</div>
-                                <h3>Privacy First</h3>
-                                <p>Hardware switches physically cut off mic, camera, GPS, and cellular radios</p>
+                                <h3>Pure AOSP 16</h3>
+                                <p>Clean Android experience with no bloatware, optimized for Raspberry Pi 5</p>
                             </div>
+                            <div class="status-grid">
+                                <div class="status-item working">
+                                    <span>✅ Boot System</span>
+                                </div>
+                                <div class="status-item working">
+                                    <span>✅ Display & Touch</span>
+                                </div>
+                                <div class="status-item working">
+                                    <span>✅ Wi-Fi & Bluetooth</span>
+                                </div>
+                                <div class="status-item progress">
+                                    <span>🚧 Camera HAL</span>
+                                </div>
+                                <div class="status-item progress">
+                                    <span>🚧 Cellular RIL</span>
+                                </div>
+                                <div class="status-item pending">
+                                    <span>❌ GPS/GNSS</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/spirit-oss/spirit-os" class="github-link" target="_blank">
+                                View on GitHub →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hardware Design Screen -->
+                    <div class="screen" id="design">
+                        <div class="app-header">
+                            <button class="back-btn" data-target="home">←</button>
+                            <h2>Hardware Design</h2>
+                        </div>
+                        <div class="app-body">
                             <div class="feature-card">
-                                <div class="feature-icon">🔧</div>
-                                <h3>Repairable</h3>
-                                <p>Designed for easy repair and upgrades by users</p>
+                                <h3>Raspberry Pi CM5 Based</h3>
+                                <p>Custom carrier board with privacy switches and expandable I/O</p>
                             </div>
+                            <div class="specs-list">
+                                <div class="spec-item">
+                                    <strong>Processor:</strong> BCM2712 Quad-core 2.4GHz
+                                </div>
+                                <div class="spec-item">
+                                    <strong>RAM:</strong> 2GB-16GB LPDDR4
+                                </div>
+                                <div class="spec-item">
+                                    <strong>Display:</strong> 5.5" 720×1280 TFT
+                                </div>
+                                <div class="spec-item">
+                                    <strong>PCB:</strong> 4-layer, 80×150mm
+                                </div>
+                            </div>
+                            <a href="https://github.com/spirit-oss/spirit-design" class="github-link" target="_blank">
+                                View KiCad Files →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Documentation Screen -->
+                    <div class="screen" id="docs">
+                        <div class="app-header">
+                            <button class="back-btn" data-target="home">←</button>
+                            <h2>Documentation</h2>
+                        </div>
+                        <div class="app-body">
                             <div class="feature-card">
-                                <div class="feature-icon">📖</div>
-                                <h3>Open Source</h3>
-                                <p>Every component, schematic, and line of code is openly documented</p>
+                                <h3>Complete Project Docs</h3>
+                                <p>Assembly guides, specifications, and development resources</p>
                             </div>
+                            <div class="docs-sections">
+                                <div class="doc-section">
+                                    <h4>📖 Getting Started</h4>
+                                    <p>Project overview and quick start guide</p>
+                                </div>
+                                <div class="doc-section">
+                                    <h4>🔧 Hardware Guides</h4>
+                                    <p>Assembly, schematics, and troubleshooting</p>
+                                </div>
+                                <div class="doc-section">
+                                    <h4>💻 Software Docs</h4>
+                                    <p>AOSP building and customization</p>
+                                </div>
+                                <div class="doc-section">
+                                    <h4>👥 Community</h4>
+                                    <p>Contributing and support resources</p>
+                                </div>
+                            </div>
+                            <a href="https://github.com/spirit-oss/spirit-docs" class="github-link" target="_blank">
+                                Browse Documentation →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- About Screen -->
+                    <div class="screen" id="about">
+                        <div class="app-header">
+                            <button class="back-btn" data-target="home">←</button>
+                            <h2>About SPIRIT</h2>
+                        </div>
+                        <div class="app-body">
                             <div class="feature-card">
-                                <div class="feature-icon">👥</div>
-                                <h3>Community Driven</h3>
-                                <p>Built by and for the community with transparent development</p>
+                                <h3>Taking Back Control</h3>
+                                <p>An open-source smartphone designed for privacy, repairability, and user empowerment</p>
+                            </div>
+                            <div class="principles">
+                                <div class="principle">
+                                    <div class="principle-icon">🔒</div>
+                                    <div>
+                                        <h4>Privacy First</h4>
+                                        <p>Hardware switches physically disconnect sensors</p>
+                                    </div>
+                                </div>
+                                <div class="principle">
+                                    <div class="principle-icon">🔧</div>
+                                    <div>
+                                        <h4>Repairable</h4>
+                                        <p>Open hardware design for easy repair and modification</p>
+                                    </div>
+                                </div>
+                                <div class="principle">
+                                    <div class="principle-icon">🌍</div>
+                                    <div>
+                                        <h4>Community Driven</h4>
+                                        <p>Developed openly with community contributions</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="links">
+                                <a href="https://github.com/spirit-oss/spirit" class="github-link" target="_blank">
+                                    Main Repository →
+                                </a>
+                                <a href="https://www.youtube.com/@V_Electronics" class="youtube-link" target="_blank">
+                                    YouTube Channel →
+                                </a>
                             </div>
                         </div>
-                    </section>
-
-                    <!-- Specifications Section -->
-                    <section class="specs">
-                        <h2 class="section-title">Specifications</h2>
-                        <div class="specs-grid">
-                            <div class="spec-item">
-                                <span class="spec-label">Processor</span>
-                                <span class="spec-value">Broadcom BCM2712 (64-bit, quad-core, up to 2.4GHz)</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">RAM</span>
-                                <span class="spec-value">2GB–16GB LPDDR4 options</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Storage</span>
-                                <span class="spec-value">16GB–64GB eMMC, expandable</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Display</span>
-                                <span class="spec-value">5.5" TFT, 720×1280 resolution</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Connectivity</span>
-                                <span class="spec-value">Wi-Fi, Bluetooth 5, GSM, GPS/GNSS</span>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Development Status -->
-                    <section class="status">
-                        <h2 class="section-title">Development Status</h2>
-                        <div class="status-grid">
-                            <div class="status-item complete">
-                                <span class="status-indicator">✅</span>
-                                <span class="status-text">Privacy Switches</span>
-                            </div>
-                            <div class="status-item complete">
-                                <span class="status-indicator">✅</span>
-                                <span class="status-text">Display & Touch</span>
-                            </div>
-                            <div class="status-item complete">
-                                <span class="status-indicator">✅</span>
-                                <span class="status-text">Wi-Fi & Bluetooth</span>
-                            </div>
-                            <div class="status-item progress">
-                                <span class="status-indicator">🚧</span>
-                                <span class="status-text">Hardware PCB</span>
-                            </div>
-                            <div class="status-item progress">
-                                <span class="status-indicator">🚧</span>
-                                <span class="status-text">Android OS</span>
-                            </div>
-                            <div class="status-item progress">
-                                <span class="status-indicator">🚧</span>
-                                <span class="status-text">Camera</span>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Repositories Section -->
-                    <section class="repositories">
-                        <h2 class="section-title">Project Repositories</h2>
-                        <div class="repo-grid">
-                            <a href="https://github.com/spirit-oss/spirit" class="repo-card">
-                                <h3>spirit</h3>
-                                <p>Main repository with project overview and coordination</p>
-                                <span class="repo-type">Overview</span>
-                            </a>
-                            <a href="https://github.com/spirit-oss/spirit/tree/spirit-design" class="repo-card">
-                                <h3>spirit-design</h3>
-                                <p>Hardware schematics, PCB layouts, and 3D models</p>
-                                <span class="repo-type">Hardware</span>
-                            </a>
-                            <a href="https://github.com/spirit-oss/spirit/tree/spirit-os" class="repo-card">
-                                <h3>spirit-os</h3>
-                                <p>Android OS customizations and device drivers</p>
-                                <span class="repo-type">Software</span>
-                            </a>
-                            <a href="https://github.com/spirit-oss/spirit/tree/spirit-docs" class="repo-card">
-                                <h3>spirit-docs</h3>
-                                <p>Documentation, assembly guides, and specifications</p>
-                                <span class="repo-type">Documentation</span>
-                            </a>
-                        </div>
-                    </section>
-
-                    <!-- Community Section -->
-                    <section class="community">
-                        <h2 class="section-title">Join the Community</h2>
-                        <div class="community-links">
-                            <a href="https://discord.gg/aJ36KzGZ" class="community-link discord">
-                                <span class="community-icon">💬</span>
-                                <span>Discord Server</span>
-                            </a>
-                            <a href="https://www.youtube.com/@Spirit-OSS" class="community-link youtube">
-                                <span class="community-icon">📺</span>
-                                <span>YouTube Channel</span>
-                            </a>
-                            <a href="mailto:contact.spirit.oss@gmail.com" class="community-link email">
-                                <span class="community-icon">📧</span>
-                                <span>Email Us</span>
-                            </a>
-                            <a href="https://github.com/spirit-oss/spirit/blob/main/CONTRIBUTING.md" class="community-link contribute">
-                                <span class="community-icon">🤝</span>
-                                <span>Contribute</span>
-                            </a>
-                        </div>
-                    </section>
-
-                    <!-- Footer -->
-                    <footer class="footer">
-                        <p>&copy; 2025 SPIRIT OSS. Licensed under GPL-3.0</p>
-                        <p>Open Source • Open Future</p>
-                    </footer>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Home Indicator -->
-            <div class="home-indicator"></div>
+                <!-- Home Indicator -->
+                <div class="home-indicator"></div>
+            </div>
         </div>
     </div>
 
