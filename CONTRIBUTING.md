@@ -16,13 +16,13 @@ We appreciate your patience as we work to ensure quality and consistency in the 
 
 # Contact
 
-V Electronics Discord server with channels for discussing SPIRIT stuff:
+SPIRIT OSS Discord server with channels for discussing SPIRIT stuff:
 
->https://discord.gg/zBG4KdHJWx
+>https://discord.gg/aJ36KzGZ
 
-Project lead maintainer email:
+Project contact email:
 
->jwaga76@gmail.com
+>contact.spirit.oss@gmail.com
 
 # For smoother cooperation:
 
@@ -43,5 +43,5 @@ Project lead maintainer email:
 
 # Tasks to do
 
-Here is the [issues list](https://github.com/V3lectronics/SPIRIT/issues). Good luck!
+Here is the [issues list](https://github.com/spirit-oss/spirit/issues). Good luck!
 

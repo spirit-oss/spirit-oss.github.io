@@ -401,6 +401,9 @@ body {
 .youtube:hover {
   border-color: #ff0000;
 }
+.email:hover {
+  border-color: #ea4335;
+}
 .contribute:hover {
   border-color: #00ff88;
 }
